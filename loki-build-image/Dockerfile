@@ -60,6 +60,7 @@ RUN GO111MODULE=on go get \
     github.com/mitchellh/gox \
     github.com/tcnksm/ghr && \
     rm -rf /go/pkg /go/src
+RUN echo $( go version )
 ENV GOCACHE=/go/cache
 
 COPY build.sh /
